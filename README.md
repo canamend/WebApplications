@@ -5,4 +5,4 @@ Integrantes:
 - Canalizo Isaac
 - De La Cruz Huerta Jonathan
 - Hernandez Ramos Angel
-- Jorge
+- Jorge Silvano Perez Hernandez
