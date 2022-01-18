@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Operaciones de matrices</h1>
+        <h1><a href="../">Operaciones de matrices</a></h1>
     </header>
     <main>
         <form action="operations.php" method="post" class="middle">
