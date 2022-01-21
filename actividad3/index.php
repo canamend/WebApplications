@@ -10,8 +10,17 @@
 </head>
 <body>
     <header>
-        <h1>Operaciones de matrices</h1>
+        <h1>Operaciones de matrices</h1>        
     </header>
+    <FORM ACTION="operations.php" METHOD="POST">
+        <label for="fname">Renglones:</label>
+        <input type="text" name="Ren">
+        <br><br>
+        <label for="fname">Columnas:</label>
+        <input type="text" name="Col">
+        <br>
+        <p><button type="submit" VALUE="Enviar">Enviar formulario</button></p>
+    </FORM>
     <main>
         <form action="operations.php" method="post" class="middle">
             <table>
