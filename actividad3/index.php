@@ -13,6 +13,17 @@
         <h1><a href="../">Operaciones de matrices</a></h1>
     </header>
     <main>
+    </header>
+    <FORM ACTION="operations.php" METHOD="POST">
+        <label for="fname">Renglones:</label>
+        <input type="text" name="Ren">
+        <br><br>
+        <label for="fname">Columnas:</label>
+        <input type="text" name="Col">
+        <br>
+        <p><button type="submit" VALUE="Enviar">Enviar formulario</button></p>
+    </FORM>
+    <main>
         <form action="operations.php" method="post" class="middle">
             <table>
                 <h2>A =</h2>
