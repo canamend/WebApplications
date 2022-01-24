@@ -12,8 +12,6 @@
     <header>
         <h1><a href="../">Operaciones de matrices</a></h1>
     </header>
-    <main>
-    </header>
     <FORM ACTION="operations.php" METHOD="POST">
         <label for="fname">Renglones:</label>
         <input type="text" name="Ren">
