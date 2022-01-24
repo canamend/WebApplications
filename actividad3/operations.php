@@ -2,11 +2,11 @@
 <head><title> Operaciones </title></head>
 <body>
 <h3> Funciones </h3>
-
 <hr>
 <?PHP
 $Ren=$_REQUEST['Ren'];
 $Col=$_REQUEST['Col'];
+$Value =3;
 
 function Valores_Ini($MatrizA,$ren,$col){
     for ($j=0; $j < $ren; $j++) { 
@@ -51,8 +51,8 @@ function Multi($MatrizA,$MatrizB,$ren,$col){
 }
 
 function TranspuestaM($MatrizA,$Ren,$Col){
-    for ($j=0; $j < 3; $j++) { 
-        for ($i = 0; $i < 3; $i++) { 
+    for ($j=0; $j < $Ren; $j++) { 
+        for ($i = 0; $i < $Col; $i++) { 
             $MatrizC[$j][$i]=$MatrizA[$i][$j];
         }
     }  
@@ -73,16 +73,70 @@ function PrintM($MatrizA,$ren,$col){
 
 echo $Ren," ",$Col," ","<br>";
 
-$MatrizA=array();
+function Multi_com($Ren,$Col){
+    $MatrizA=array();
+    $MatrizB=array();
+    $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
+    $MatrizB=Valores_Ini($MatrizB,$Ren,$Col);
+    $MatrizC= Multi($MatrizA,$MatrizB,$Ren,$Col);
+    PrintM($MatrizA,$Ren,$Col);
+    PrintM($MatrizB,$Ren,$Col);
+    PrintM($MatrizC,$Ren,$Col);
+}
+
+function Suma_com($Ren,$Col){
+    $MatrizA=array();
+    $MatrizB=array();
+    $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
+    $MatrizB=Valores_Ini($MatrizB,$Ren,$Col);
+    $MatrizC= SumaM($MatrizA,$MatrizB,$Ren,$Col);
+    PrintM($MatrizA,$Ren,$Col);
+    PrintM($MatrizB,$Ren,$Col);
+    PrintM($MatrizC,$Ren,$Col);
+}
+
+function Resta_com($Ren,$Col){
+    $MatrizA=array();
+    $MatrizB=array();
+    $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
+    $MatrizB=Valores_Ini($MatrizB,$Ren,$Col);
+    $MatrizC= RestaM($MatrizA,$MatrizB,$Ren,$Col);
+    PrintM($MatrizA,$Ren,$Col);
+    PrintM($MatrizB,$Ren,$Col);
+    PrintM($MatrizC,$Ren,$Col);
+}
+
+function Transpuesta_com($Ren,$Col){
+    $MatrizA=array();
+    $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
+    $MatrizC= TranspuestaM($MatrizA,$Ren,$Col);
+    PrintM($MatrizA,$Ren,$Col);
+    PrintM($MatrizC,$Ren,$Col);
+}
+
+switch($Value){
+    case 1:
+        Suma_com($Ren,$Col);
+        break;
+    case 2:
+        Resta_com($Ren,$Col);
+        break;
+    case 3:
+        Multi_com($Ren,$Col);
+        break;
+    case 4:
+        Transpuesta_com($Ren,$Col);
+        break;
+}
+
+/*$MatrizA=array();
 $MatrizB=array();
 $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
 $MatrizB=Valores_Ini($MatrizB,$Ren,$Col);
 $MatrizC= Multi($MatrizA,$MatrizB,$Ren,$Col);
 PrintM($MatrizA,$Ren,$Col);
 PrintM($MatrizB,$Ren,$Col);
-PrintM($MatrizC,$Ren,$Col);
-
-
+PrintM($MatrizC,$Ren,$Col);*/
 ?>
 </body>
 </html>
