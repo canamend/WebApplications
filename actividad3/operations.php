@@ -1,11 +1,13 @@
 <html>
 <head><title> Operaciones </title></head>
 <body>
-<h3> Funciones </h3>
+<h1> Resultados </h1>
 <hr>
 <?PHP
 $Ren=$_REQUEST['Ren'];
 $Col=$_REQUEST['Col'];
+$Ren2=$_REQUEST['Ren2'];
+$Col2=$_REQUEST['Col2'];
 $Value =$_REQUEST['Opcion']; 
 
 function Valores_Ini($MatrizA,$ren,$col){
@@ -35,10 +37,10 @@ function RestaM($MatrizA,$MatrizB,$Ren,$Col){
     return($MatrizC);  
 }
 
-function Multi($MatrizA,$MatrizB,$ren,$col){
+function Multi($MatrizA,$MatrizB,$ren,$col,$col2){
     for ($i = 0; $i < $ren; $i++) {
         // Dentro recorremos las filas de la primera (A)
-        for ($j = 0; $j < $col; $j++) {
+        for ($j = 0; $j < $col2; $j++) {
             $MatrizC[$i][$j] = 0;
             // Y cada columna de la primera (A)
             for ($k = 0; $k < $col; $k++) {
@@ -51,8 +53,8 @@ function Multi($MatrizA,$MatrizB,$ren,$col){
 }
 
 function TranspuestaM($MatrizA,$Ren,$Col){
-    for ($j=0; $j < $Ren; $j++) { 
-        for ($i = 0; $i < $Col; $i++) { 
+    for ($i=0; $i < $Ren; $i++) { 
+        for ($j = 0; $j < $Col; $j++) { 
             $MatrizC[$j][$i]=$MatrizA[$i][$j];
         }
     }  
@@ -71,17 +73,17 @@ function PrintM($MatrizA,$ren,$col){
     }
 }
 
-echo $Ren," ",$Col," ","<br>";
+echo $Ren," ",$Col," ",$Ren2," ",$Col2," ",$Value, "<br>";
 
-function Multi_com($Ren,$Col){
+function Multi_com($Ren,$Col,$Ren2,$Col2){
     $MatrizA=array();
     $MatrizB=array();
     $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
-    $MatrizB=Valores_Ini($MatrizB,$Ren,$Col);
-    $MatrizC= Multi($MatrizA,$MatrizB,$Ren,$Col);
+    $MatrizB=Valores_Ini($MatrizB,$Ren2,$Col2);
+    $MatrizC= Multi($MatrizA,$MatrizB,$Ren,$Col,$Col2);
     PrintM($MatrizA,$Ren,$Col);
-    PrintM($MatrizB,$Ren,$Col);
-    PrintM($MatrizC,$Ren,$Col);
+    PrintM($MatrizB,$Ren2,$Col2);
+    PrintM($MatrizC,$Ren,$Col2);
 }
 
 function Suma_com($Ren,$Col){
@@ -110,23 +112,70 @@ function Transpuesta_com($Ren,$Col){
     $MatrizA=array();
     $MatrizA=Valores_Ini($MatrizA,$Ren,$Col);
     $MatrizC= TranspuestaM($MatrizA,$Ren,$Col);
+
     PrintM($MatrizA,$Ren,$Col);
-    PrintM($MatrizC,$Ren,$Col);
+    PrintM($MatrizC,$Col,$Ren);
 }
 
-switch($Value){
-    case 1:
-        Suma_com($Ren,$Col);
-        break;
-    case 2:
-        Resta_com($Ren,$Col);
-        break;
-    case 3:
-        Multi_com($Ren,$Col);
-        break;
-    case 4:
-        Transpuesta_com($Ren,$Col);
-        break;
+function validacion($Ren,$Col,$Ren2,$Col2,$Value){
+    $band=0;
+    if($Ren>0 && $Col>0 && $Ren2>0 && $Col2>0 || $Value>3){
+        switch($Value){
+            case 1:
+                if($Ren==$Ren2 && $Col==$Col2){
+                    $band=1;
+                }else{
+                    echo "(Suma)Los renglones y columnas deben ser iguales", "<br>";
+                }
+                break;
+            case 2:
+                if($Ren==$Ren2 && $Col==$Col2){
+                    $band=1;
+                }else{
+                    echo "(Resta)Los renglones y columnas deben ser iguales", "<br>";
+                }
+                    break;
+            case 3:
+                if($Col==$Ren2){  
+                    $band=1;
+                }else{
+                    echo "Las Columnas de la matriz 1 deben coincidir con los Renglones de la Matriz 2", "<br>";
+                }
+                break;
+            case 4:
+                if($Ren>0 && $Col>0){
+                    $band=1;
+                }else{
+                    echo "Los renglones y columnas deben ser mayores a 0", "<br>";
+                }
+                break;
+        }
+        if($band>0){
+            return true;
+        }
+    }else{
+        return false;
+    }
+    
+}
+
+if(validacion($Ren,$Col,$Ren2,$Col2,$Value)){
+    switch($Value){
+        case 1:
+            Suma_com($Ren,$Col);
+            break;
+        case 2:
+            Resta_com($Ren,$Col);
+            break;
+        case 3:
+            Multi_com($Ren,$Col,$Ren2,$Col2);
+            break;
+        case 4:
+            Transpuesta_com($Ren,$Col);
+            break;
+    }
+}else{
+    echo "No se cumplen las condiciones";
 }
 
 /*$MatrizA=array();
