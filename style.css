@@ -4,6 +4,10 @@ body {
     color: #f5f6f7;
 }
 
+a{
+    color: cornsilk;
+}
+
 p {
     font-size: 16px;
 }
