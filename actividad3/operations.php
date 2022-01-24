@@ -6,7 +6,7 @@
 <?PHP
 $Ren=$_REQUEST['Ren'];
 $Col=$_REQUEST['Col'];
-$Value =3;
+$Value =$_REQUEST['Opcion']; 
 
 function Valores_Ini($MatrizA,$ren,$col){
     for ($j=0; $j < $ren; $j++) { 
