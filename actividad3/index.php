@@ -7,20 +7,37 @@
     <title>Matrix operations</title>
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1><a href="../">Operaciones de matrices</a></h1>
-    </header>
-    <FORM ACTION="operations.php" METHOD="POST">
-        <label for="fname">Renglones:</label>
-        <input type="text" name="Ren">
-        <br><br>
-        <label for="fname">Columnas:</label>
-        <input type="text" name="Col">
-        <br>
-        <p><button type="submit" VALUE="Enviar">Enviar formulario</button></p>
-    </FORM>
+    <div class="container">
+        <header>
+            <h1><a href="../">Operaciones de matrices</a></h1>
+        </header>
+        <FORM ACTION="operations.php" METHOD="POST">
+            <div class="row">
+                <div class="input-group mb-3 col">
+                    <label for="fname">Renglones:</label>
+                    <input type="number" name="Ren" class="form-control" placeholder="Renglones">
+                </div>
+                <div class="input-group mb-3 col">
+                    <label for="fname">Columnas:</label>
+                    <input type="number" name="Col" class="form-control" placeholder="Columnas">
+                </div>
+                <div class="col-6">
+                <select name="Opcion" id="" class="form-select">
+                    <option selected>Seleccione la operación a realizar</option>
+                    <option value="1"> Suma (+) </option>
+                    <option value="2"> Resta (-) </option>
+                    <option value="3"> Multiplicación (*) </option>
+                    <option value="4"> Transformada (T) </option>
+                </select>
+                </div>
+                <p><button type="submit" VALUE="Enviar" class="btn btn-primary">Calcular</button></p>
+            </div>
+        </FORM>
+    </div>
+    
     <main>
         <form action="operations.php" method="post" class="middle">
             <table>
@@ -42,7 +59,8 @@
                 </tr>
             </table>
 
-            <select name="Opcion" id="">
+            <select name="Opcion" id="" class="form-select">
+                <option selected>Open this select menu</option>
                 <option value="1"> + </option>
                 <option value="2"> - </option>
                 <option value="3"> * </option>
