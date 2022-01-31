@@ -22,77 +22,82 @@
         <p><button type="submit" VALUE="Enviar">Enviar formulario</button></p>
     </FORM>
     <main>
-        <form action="operations.php" method="post" class="middle">
-            <table>
-                <h2>A =</h2>
-                <tr>
-                    <td><input type="number" name="A11" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A12" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A13" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="A21" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A22" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A23" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="A31" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A32" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="A33" id="" min="-99" max="99"></td>
-                </tr>
-            </table>
+        <form action="operations.php" method="POST">
+            <div class="middle">
+                <table>
+                    <h2>A =</h2>
+                    <tr>
+                        <td><input type="number" name="A00" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A01" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A02" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="A10" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A11" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A12" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="A20" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A21" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="A22" id="" min="-99" max="99"></td>
+                    </tr>
+                </table>
 
-            <select name="Opcion" id="">
-                <option value="1"> + </option>
-                <option value="2"> - </option>
-                <option value="3"> * </option>
-                <option value="4"> T </option>
-            </select>
-            
-            <table>
-                <h2>B =</h2>
-                <tr>
-                    <td><input type="number" name="B11" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B12" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B13" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="B21" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B22" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B23" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="B31" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B32" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="B33" id="" min="-99" max="99"></td>
-                </tr>
-            </table>
+                <select name="Opcion" id="">
+                    <option value="1"> + </option>
+                    <option value="2"> - </option>
+                    <option value="3"> * </option>
+                    <option value="4"> T </option>
+                </select>
+                
+                <table>
+                    <h2>B =</h2>
+                    <tr>
+                        <td><input type="number" name="B00" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B01" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B02" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="B10" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B11" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B12" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="B20" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B21" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="B22" id="" min="-99" max="99"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="middle">
+                <button type="submit" VALUE="Calcular">Calcular</button>
+                <button type="submit" VALUE="Limpiar">Limpiar</button>
+            </div>
+
+            <div class="middle">
+                <table>
+                    <h2>R =</h2>
+                    <tr>
+                        <td><input type="number" name="R00" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R01" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R02" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="R10" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R11" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R12" id="" min="-99" max="99"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="R20" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R21" id="" min="-99" max="99"></td>
+                        <td><input type="number" name="R22" id="" min="-99" max="99"></td>
+                    </tr>
+                </table>
+            </div>
         </form>
 
-        <div class="middle">
-            <table>
-                <h2>R =</h2>
-                <tr>
-                    <td><input type="number" name="R11" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R12" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R13" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="R21" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R22" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R23" id="" min="-99" max="99"></td>
-                </tr>
-                <tr>
-                    <td><input type="number" name="R31" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R32" id="" min="-99" max="99"></td>
-                    <td><input type="number" name="R33" id="" min="-99" max="99"></td>
-                </tr>
-            </table>
-        </div>
-        <div class="middle">
-            <button>Calcular</button>
-            <button>Limpiar</button>
-        </div>
+        
     </main>
     <footer>
         <div>
