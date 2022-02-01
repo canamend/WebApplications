@@ -10,19 +10,49 @@ $Ren2=$_REQUEST['Ren2'];
 $Col2=$_REQUEST['Col2'];
 $Value =$_REQUEST['Opcion']; 
 
-function Valores_Ini($MatrizA,$ren,$col){
-    for ($j=0; $j < $ren; $j++) { 
-        for ($i = 0; $i < $col; $i++) { 
-            $MatrizA[$j][$i]=rand(-99,99);
-        }
+//Inicializamos matriz en 0
+for($i=0;$i<3;$i++){
+    for($j=0;$j<3;$j++){
+        $MatrizA[$i][$j]=0;
+        $MatrizB[$i][$j]=0;
     }
-    return($MatrizA);
 }
 
-function SumaM($MatrizA,$MatrizB,$Ren,$Col){
-    for ($j=0; $j < $Ren; $j++) { 
-        for ($i = 0; $i < $Col; $i++) { 
-            $MatrizC[$j][$i]=$MatrizA[$j][$i]+$MatrizB[$j][$i];
+for($i=0;$i<3;$i++){
+    for($j=0;$j<3;$j++){
+        $MatrizA[$i][$j]=$_REQUEST['A'.$i.$j];
+        $MatrizB[$i][$j]=$_REQUEST['B'.$i.$j];
+        //echo ' '.$MatrizB[$i][$j] ;
+    }
+    //echo '<br>';
+}
+//echo 'Operación seleccionada'.$selectedOperation;
+
+switch($selectedOperation){
+    case 1:
+        SumaM($MatrizA,$MatrizB);
+        break;
+    case 2:
+        Resta_com($MatrizA,$MatrizB);
+        break;
+    case 3:
+        Multi_com($MatrizA,$MatrizB);
+        break;
+    case 4:
+        Transpuesta_com($MatrizA,$MatrizB);
+        break;
+    default: '<script>alert("Operacion no definida")</script>';
+}
+
+
+function SumaM($MatrizA,$MatrizB){
+    for ($i=0; $i<3; $i++) { 
+        for ($j = 0; $j<3; $j++) { 
+            $MatrizC[$i][$j]=$MatrizA[$i][$j]+$MatrizB[$i][$j];
+            echo $MatrizC[$i][$j];
+            '<script>
+                document.getElementsByName("R.$i.$j").innerHTML = "$MatrizC[$i][$j]";
+            </script>';
         }
     }
     return($MatrizC);
@@ -187,5 +217,3 @@ PrintM($MatrizA,$Ren,$Col);
 PrintM($MatrizB,$Ren,$Col);
 PrintM($MatrizC,$Ren,$Col);*/
 ?>
-</body>
-</html>

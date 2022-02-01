@@ -50,7 +50,6 @@
             </div>
         </FORM>
     </div>
-
     <footer>
         <div>
             <ul>
