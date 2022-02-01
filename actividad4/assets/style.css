@@ -1,0 +1,78 @@
+body{
+    background: #23201c;
+    font-family: sans-serif;
+}
+
+main{
+    background: url(background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    min-height: 700px;
+}
+
+section{
+    display: flex;
+    margin: 25px auto 130px;
+    color: azure;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    background: #23201c00;
+    color: azure;  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid beige;
+    width: 240px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button > img{
+    width: 95px;
+    height: 95px;
+}
+
+footer{
+    background: #436070;
+    color:cornsilk;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    list-style: none;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+}
+
+.partidos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.select{
+    position: absolute;
+    opacity: 0;
+}
+
+button:hover .select {
+    animation-name: desvanecer;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes desvanecer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
