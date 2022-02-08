@@ -33,13 +33,15 @@ class Conjunto
    }
    public function escribir($str)
    {
-      echo "<br>$str<br>";
-      echo "Tamaño = $this->Tam <br>";
-      echo "[";
+      echo "<div class=container text-center>";
+      echo "<br><h2>$str</h2><br>";
+      echo "<h3>Tamaño = $this->Tam </h3><br>";
+      echo "<h3>[";
       for($i=0;$i<$this->Tam;$i++){
         echo " ",$this->Element[$i] ,",";
       }
-      echo "]<br>";
+      echo "]</h3><br>";
+      echo "</div>";
       
    }
    public function Union($Conjunto1,$Conjunto2){
