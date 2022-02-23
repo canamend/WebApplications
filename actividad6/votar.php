@@ -3,7 +3,18 @@ $servername = "localhost";
 $database = "votaciones";
 $username = "root";
 $password = "";
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto-Registrado</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<?php
 // Create connection
 $nom=$_REQUEST['ciudadano'];
 
@@ -33,14 +44,22 @@ if(isset($_REQUEST['Nueva_Alianza'])){
     $voto=$_REQUEST['NULL'];
 }
 
-echo "Nombre: $usuario <br>";
-echo "Partido: $voto <br>";
-
 $sql = "INSERT INTO votos (id_cd, id_pt) select ciudadanos.INE,partidos.id_partido from ciudadanos,partidos where ciudadanos.INE='$nom' and partidos.partido like '%$voto%'"; 
 $result = mysqli_query($conn,$sql);
 if($result){
-       echo "Logrado";
-}
-
-$sql = "INSERT INTO votos() values()";
 ?>
+<body class="voto">
+    <br>
+    <article>
+        <?php
+        echo "<h1>Nombre: $usuario </h1><br>";
+        echo "<h3>Partido: $voto </h3><br>";
+        echo "<p>Voto registrado con exito</p>";
+        ?>
+        <a href="index.php">Regresar</a>
+    </article>
+<?php
+}
+?>
+</body>
+</html>
