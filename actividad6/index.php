@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
-$sql = "SELECT nombre FROM ciudadanos";
+$sql = "SELECT * FROM ciudadanos";
 $result = mysqli_query($conn,$sql);
 ?>
 <!DOCTYPE html>
@@ -23,12 +23,13 @@ $result = mysqli_query($conn,$sql);
         <form action="votar.php">
             <section>
                 <label for="">Nombre: </label>
-                <select name="ciudadanos">
-                    <option value="0">ciudadano</option>
+                <select name="ciudadano" id = "ciudadano">
+                    <option value= 0 >ciudadano</option>
                 <?php
-                    $i=0;
                     while($row = mysqli_fetch_array($result)) {
-                    echo '<option value="'.($i+1).'">'.$row[$i].'</option>';
+                        $usuario=$row['INE'];
+                        $nom=$row['nombre'];
+                        echo "<option value= $usuario > $usuario $nom </option>";
                     }
                 ?>
                 </select>
