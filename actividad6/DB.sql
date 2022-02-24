@@ -1,7 +1,9 @@
+DROP DATABASE IF EXISTS votaciones;
 CREATE DATABASE votaciones;
 
 USE votaciones;
 
+DROP TABLE IF EXISTS partidos;
 CREATE TABLE partidos(
     id_partido INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     partido VARCHAR(50) NOT NULL,
@@ -9,13 +11,14 @@ CREATE TABLE partidos(
     descripcion VARCHAR(200)
 );
 
+DROP TABLE IF EXISTS ciudadanos;
 CREATE TABLE ciudadanos(
     INE VARCHAR(10) NOT NULL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     fecha_nacimiento DATE
 );
 
-use votaciones;
+DROP TABLE IF EXISTS votos;
 CREATE TABLE votos(
     id_voto INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cd VARCHAR(10) NOT NULL,
