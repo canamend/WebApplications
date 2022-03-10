@@ -5,7 +5,7 @@ class conteo
 
     public function __construct()
     {
-        $servername = "localhost";
+        $servername = "localhost:3308";
         $database = "votaciones";
         $username = "root";
         $password = "";

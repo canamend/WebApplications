@@ -14,7 +14,7 @@
 
 	$Conteo = new conteo();
 
-	$servername = "localhost";
+	$servername = "localhost:3308";
 	$database = "votaciones";
 	$username = "root";
 	$password = "";
