@@ -17,6 +17,7 @@
           <li><a href="consultasCliente.php"><span>CONSULTAS</span></a></li>
           <li><a href="registrarseCliente.php"><span>RENTAS</span></a></li>
           <li><a href="contacttoCliente.php" class="current"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>
@@ -46,6 +47,9 @@
     <div id="content">
       <h2>CONTACTO</h2>
       <p>Angel Hernandez Ramos</p>
+      <p>Isaac Canalizo Mendoza</p>
+      <p>Jorge Perez Hernandez</p>
+      <p>Jonathan de la Cruz Huerta</p>
     </div>
   </div>
 </div>

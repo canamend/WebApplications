@@ -17,6 +17,7 @@
           <li><a href="consultasCliente.php"><span>CONSULTAS</span></a></li>
           <li><a href="registrarseCliente.php"><span>RENTAS</span></a></li>
           <li><a href="contacttoCliente.php"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>
@@ -44,10 +45,10 @@
       <p>&nbsp;</p>
     </div>
     <div id="content">
-      <h2>Bienvenidos a la Videoteca</h2>
-      <p><img src="videoteca.JPG" width="226" height="179" /></p>
-      <p>Esta pagina es utilizada para rentar peliculas nacionales e internacionales, podras encontrar los titulos con mayor exito:</p>
-      <p>Para rentar una pelcula debe registrarse  </p>
+      <h2>Bienvenidos</h2>
+      <p>Cliente: </p>
+      <p>Esperamos que disfrutes tu visita: </p>
+      <p>&nbsp;</p>
     </div>
   </div>
 </div>

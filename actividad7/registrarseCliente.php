@@ -17,6 +17,7 @@
           <li><a href="consultasCliente.php"><span>CONSULTAS</span></a></li>
           <li><a href="registrarseCliente.php" class="current"><span>RENTAS</span></a></li>
           <li><a href="contacttoCliente.php"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>

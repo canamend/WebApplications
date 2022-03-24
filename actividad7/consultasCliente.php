@@ -17,6 +17,7 @@
           <li><a href="consultasCliente.php" class="current"><span>CONSULTAS</span></a></li>
           <li><a href="registrarseCliente.php"><span>RENTAS</span></a></li>
           <li><a href="contacttoCliente.php"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>
@@ -47,7 +48,7 @@
       <h2>REGISTRARSE</h2>
       <p>Aqui</p>
 	   <?PHP
-   $link=mysqli_connect("localhost","root","");
+   $link=mysqli_connect("localhost:3308","root","");
    mysqli_select_db($link,"videoteca");
 
    $result=mysqli_query($link,"select * from pelicula");

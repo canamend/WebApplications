@@ -18,6 +18,7 @@
           <li><a href="registrarseAdmin.php"><span>CAMBIOS</span></a></li>
           <li><a href="accesoAdmin.php"><span>REPORTES</span></a></li>
           <li><a href="contacttoAdmin.php"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>

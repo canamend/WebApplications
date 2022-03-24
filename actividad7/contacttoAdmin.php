@@ -18,6 +18,7 @@
           <li><a href="registrarseAdmin.php"><span>CAMBIOS</span></a></li>
           <li><a href="accesoAdmin.php"><span>REPORTES</span></a></li>
           <li><a href="contacttoAdmin.php" class="current"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>
@@ -47,6 +48,9 @@
     <div id="content">
       <h2>CONTACTO</h2>
       <p>Angel Hernandez Ramos</p>
+      <p>Isaac Canalizo Mendoza</p>
+      <p>Jorge Silvano Perez</p>
+      <p>Jonathan de la Cruz</p>
     </div>
   </div>
 </div>

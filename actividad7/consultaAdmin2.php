@@ -18,6 +18,7 @@
           <li><a href="registrarseAdmin.php"><span>CAMBIOS</span></a></li>
           <li><a href="accesoAdmin.php"><span>REPORTES</span></a></li>
           <li><a href="contacttoAdmin.php"><span>CONTACTO</span></a></li>
+		  <li><a href="index.php"><span>Salir</span></a></li>
         </ul>
       </div>
     </div>
@@ -48,7 +49,7 @@
       <h2>CONSULTA DE PELICULAS </h2>
       <p>aqui</p>
 	 	<?PHP
-   $link=mysqli_connect("localhost","root","");
+   $link=mysqli_connect("localhost:3308","root","");
    mysqli_select_db($link,"videoteca");
    $id=$_GET['id_peli'];
  
