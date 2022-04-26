@@ -1,0 +1,69 @@
+
+<div class="container bg-warning m-5 p-3">
+    <h1>Crear
+        Ruta <hr>
+        <small>Ruta del taco</small>
+    </h1>
+
+    <div fxLayout="row" 
+        fxLayoutGap="40px"
+        fxLayout.xs="column">
+
+        <div fxFlex="100" fxLayout="column">
+            
+            <div fxLayout="row" 
+                fxLayout.xs="column"
+                fxLayoutGap="10px">
+                <mat-form-field fxFlex="100">
+                    <mat-label>Nombre de la ruta</mat-label>
+                    <input  matInput
+                            type="text"
+                            placeholder="Ruta del..."
+                            required
+                    >
+                </mat-form-field>
+        
+                <mat-form-field fxFlex="100">
+                    <mat-label>Descripcion</mat-label>
+                    <input  matInput
+                            type="text"
+                            placeholder="Ingrese descripción de la ruta."
+                            required
+                    >
+                </mat-form-field>
+            </div>
+
+            <mat-form-field fxFlex="100">
+                <mat-label>Duración</mat-label>
+                <input  matInput
+                        type="text"
+                        placeholder="Tiempo estimado para recorrerla"
+                        required
+                >
+            </mat-form-field>
+
+            <mat-form-field fxFlex="100">
+                <mat-label>Foto Url</mat-label>
+                <input  matInput
+                        type="url"
+                        placeholder="Url de la imagen"
+                        required
+                >
+            </mat-form-field>
+
+            <br>
+
+            <div fxLayout>
+                <button mat-raised-button 
+                        color="primary">
+                    <mat-icon>edit</mat-icon>
+
+                </button>
+
+                <span class="spacer"></span>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -5,6 +5,10 @@ import { MainComponent } from './pages/main/main.component';
 import { RouterModule } from '@angular/router';
 import { UserRoutingModule } from './user-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ConsultasComponent } from './pages/consultas/consultas.component';
+import { CrearRutaComponent } from './pages/crear-ruta/crear-ruta.component';
+import { ModificarRutaComponent } from './pages/modificar-ruta/modificar-ruta.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -12,12 +16,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   declarations: [
     LayoutComponent,
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    ConsultasComponent,
+    CrearRutaComponent,
+    ModificarRutaComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    UserRoutingModule
+    UserRoutingModule,
+    MaterialModule
   ]
 })
 export class UserModule { }

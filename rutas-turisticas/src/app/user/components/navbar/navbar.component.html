@@ -1,20 +1,18 @@
-
-<nav class="navbar navbar-expand-sm">
-
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container-fluid">
-      <!-- Links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 3</a>
-        </li>
-      </ul>
+      <a class="navbar-brand" href="#">Rutas turísticas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" routerLinkActive="navbar-link-active" routerLink="/user/home">Home</a>
+          <a class="nav-link" routerLinkActive="navbar-link-active" routerLink="/user/consultas">Consultar rutas</a>
+          <a class="nav-link" routerLinkActive="navbar-link-active" routerLink="/user/crear">Crear ruta</a>
+          <a class="nav-link" routerLinkActive="navbar-link-active" routerLink="/user/modificar">Modificar ruta</a>
+          <a class="nav-link" href="#" tabindex="-1" >Contacto</a>
+        </div>
+      </div>
     </div>
-  
   </nav>
 

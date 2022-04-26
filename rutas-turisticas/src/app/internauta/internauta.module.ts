@@ -7,6 +7,8 @@ import { MainComponent } from './pages/main/main.component';
 import { RouterModule } from '@angular/router';
 import { InternautaRoutingModule } from './internauta-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ConsultasComponent } from './pages/consultas/consultas.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -16,12 +18,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RegisterUserComponent,
     LayoutComponent,
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    ConsultasComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    InternautaRoutingModule
+    InternautaRoutingModule,
+    MaterialModule
   ]
 })
 export class InternautaModule { }
