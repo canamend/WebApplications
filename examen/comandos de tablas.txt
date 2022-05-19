@@ -1,0 +1,34 @@
+DROP DATABASE IF EXISTS adopta_mascota; 
+CREATE DATABASE adopta_mascota;
+
+USE adopta_mascota;
+DROP TABLE IF EXISTS catalogo;
+CREATE TABLE catalogo(
+  id_catalogo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  foto_url VARCHAR(128) NOT NULL,
+  nombre VARCHAR(30) NOT NULL,
+  edad int NOT NULL,
+  raza VARCHAR(30) NOT NULL,
+  descripcion VARCHAR(300) NOT NULL 
+);
+
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE usuarios(
+  id_usuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(128) NOT NULL,
+  telefono int NOT NULL,
+  cuidad VARCHAR(128),
+  mail VARCHAR(100),
+  edad int NOT NULL,
+  genero CHAR(1)
+);
+
+USE adopta_mascota;
+DROP TABLE IF EXISTS adopciones;
+CREATE TABLE adopciones(
+  fecha date NOT NULL,
+  id_catalogo INT NOT NULL, 
+  id_usuario INT NOT NULL,
+FOREIGN KEY(id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(id_catalogo) REFERENCES catalogo(id_catalogo) ON DELETE CASCADE ON UPDATE CASCADE, PRIMARY KEY(id_usuario,id_catalogo, fecha)
+);
